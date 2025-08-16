@@ -1,14 +1,12 @@
 import adapter from '@sveltejs/adapter-static';
-import preprocess from 'svelte-preprocess';
 
-export default {
-	preprocess: preprocess({ typescript: false }),
+const dev = process.argv.includes('dev');
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
 	kit: {
-		adapter: adapter({
-			fallback: 'index.html'
-		}),
+		adapter: adapter(),
 		paths: {
-			base: '/my-site'
+			base: dev ? '' : process.env.BASE_PATH,
 		}
 	}
-};
