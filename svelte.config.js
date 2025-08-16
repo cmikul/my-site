@@ -1,18 +1,17 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 
+const dev = process.env.NODE_ENV === 'development';
+const repoName = dev ? '' : '/my-site'; // replace with your repo name
+
 export default {
-	preprocess: preprocess({
-		typescript: false
-	}),
+	preprocess: preprocess({ typescript: false }),
 	kit: {
 		adapter: adapter({
-			// Single-page fallback
 			fallback: 'index.html'
 		}),
-		// Optional: if your repo is not at root
-		// paths: {
-		//   base: '/your-repo-name'
-		// }
+		paths: {
+			base: repoName
+		}
 	}
 };
