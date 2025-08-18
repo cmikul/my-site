@@ -14,7 +14,7 @@ const config = {
 		adapter: adapter({
 			// The default fallback for SPAs is `index.html`. 
 			// We will copy this to 404.html in our build process later.
-			fallback: 'index.html'
+			fallback: '404.html'
 		}),
 		paths: {
 			// This must match your repository name for GitHub Pages to work.
