@@ -9,7 +9,7 @@
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"lint": "eslint .",
-		"deploy": "pnpm run build && pnpx gh-pages -d build -t true"
+		"deploy": "pnpm run build && pnpx gh-pages -d build -t"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
