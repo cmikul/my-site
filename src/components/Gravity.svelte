@@ -48,7 +48,7 @@
                 }
 
                 init_cor_smooth(j: number, n: number) {
-                    let R = 100; // base scale
+                    let R = 70; // base scale
                     let coeffs = [
                         { r: 1, amp: R },
                         { r: 1, amp: R },
