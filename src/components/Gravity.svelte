@@ -231,7 +231,7 @@
             // Replace global draw() with p.draw
             p.draw = () => {
                 p.background("#020617");
-                p.translate(p.width / 2, p.height / 2); // Center curve
+                p.translate(p.width / 4, p.height / 4); // Center curve
 
                 if (p.mouseIsPressed) {
                     for (let i = 0; i < bodies.length; i++) {

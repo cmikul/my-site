@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+:root{zoom: 200%}
+
 html {
     scroll-behavior: smooth;
 }

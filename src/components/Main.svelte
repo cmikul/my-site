@@ -7,10 +7,12 @@
 
     import { Atom } from "lucide-svelte";
 
+    import SvelteLogo from '$lib/assets/svelte-logo-cutout.svg?component';
+
     let steps = [
         {
             name: "CDS Finder",
-            icon: "fa-solid fa-search",
+            icon: "fa-solid fa-dna",
             href: "https://github.com/Vassar-RiboLab/transcript-utils",
         },
         {
@@ -18,7 +20,11 @@
             icon: "fa-solid fa-eye",
             href: "https://github.com/jspsych/eyetracking-utils",
         },
-        { name: "n-Body", icon: "fa-solid fa-circle", href: "" },
+        { 
+            name: "This Website", 
+            icon: "fa-solid fa-file-alt", 
+            href: "https://github.com/cmikul/my-site",
+        },
         { name: "Kinetica", icon: Atom, href: "" },
     ];
 
@@ -52,12 +58,12 @@
         class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"
     >
         <div class="flex flex-col text-left gap-6 md:gap-8">
-            <h2 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
+            <h2 class="font-semibold text-2xl sm:text-3xl md:text-4xl">
                 <span class="poppins text-cyan-400"
                     >Hi! My name is Colin Mikulski</span
                 >
             </h2>
-            <h2 class="font-semibold text-2xl sm:text-3xl md:text-4xl">
+            <h2 class="font-semibold text-xl sm:text-2xl md:text-3xl">
                 I am a <TypingEffect />
             </h2>
             <a
@@ -77,7 +83,7 @@
         </div>
     </section>
 
-    <section id="projects" class="scroll-mt-30 py-40 flex flex-col gap-10">
+    <section id="projects" class="scroll-mt-0 py-60 flex flex-col gap-10">
         <div class="flex flex-col gap-2 text-center">
             <h6 class="text-large sm:text-xl md:text-2xl">
                 A few of my creative endeavors.
@@ -106,11 +112,10 @@
             </Step>
             <Step step={steps[2]}>
                 <p>
-                    2D browser-based gravity simulation created in p5.js
-                    featuring collision detection and mouse interaction.
-                    Parameter tuning enables dynamic and visually interesting
-                    particle behaviors, such as the coordination shown above.
-                    Stay tuned for a more interactive stand-alone version!
+                    I made this website using Sveltekit to try my hand at web development and have a 
+                    personalized porfolio in the end. I wanted it to be dynamic and visually interesting,
+                    so I included a custom typing animation and an n-body simulation 
+                    (which I made in p5.js following "The Nature of Code") above.
                 </p>
             </Step>
         </div>
